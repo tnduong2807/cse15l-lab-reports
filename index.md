@@ -10,4 +10,4 @@ Hello, world!
 
 [Lab Report 0](lab-report-1-week-0.md)
 
-[Lab Report 1](cse15l-week1-lab-report1.md)
+[Lab Report 1](https://tnduong2807.github.io/cse-15l-lab-report1/)
