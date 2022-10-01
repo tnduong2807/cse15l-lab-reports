@@ -3,7 +3,7 @@ Hello, this topic will be remore access and filesystem. Follow each step to comp
 ## Step 1: Installing VScode
 Use this link [https://code.visualstudio.com/](https://code.visualstudio.com/) to go to the Visual Studio Code website, and follow the instructions of the website to download and install vscode on your computer (**Be carefull for different major operating systems such as OSX(for Macs) and Windows (for PCs)**). If you encounter an error installing Visual Studio Code, please speak to your tutor or ask your groupmates for help.
 When you completed installing VScode, open it and you should see a window of Vscode look like this (depend on your system and settings, your window could look a bit different):
-![](file:///C:/Users/duong/OneDrive/Pictures/Screenshots/Screenshot%20(14).png)
+![](https://github.com/tnduong2807/cse15l-lab-reports/blob/main/Screenshot%20(14).png?raw=true)
 
 ## Step 2: Remotely Connecting
 * Follow the intructions and only install OpenSSh **client**, not the server:
@@ -60,7 +60,7 @@ There are some useful commands to try running:
 * Ctrl-D
 * Type the command **exit** and press enter
 Here are the examples when you ran the commands:
-![](file:///C:/Users/duong/OneDrive/Pictures/Screenshots/Screenshot%20(22).png)
+![](https://github.com/tnduong2807/cse15l-lab-reports/blob/main/Screenshot%20(22).png?raw=true)
 
 ## Step 4: Moving Files with **scp**
 In this step, you learn how to copy files back and forth between the computer on the server. Use the Command **scp** on your client Terminal (not connected to **ieng6**). Create a file called **WhereAmI.java** on your computer and enter the following contents into it:
@@ -89,7 +89,7 @@ javac WhereAmI.java
 java WhereAmI
 ```
 After you run the program, you Terminal should look like this:
-![](file:///C:/Users/duong/OneDrive/Pictures/Screenshots/Screenshot%20(17).png)
+![](https://github.com/tnduong2807/cse15l-lab-reports/blob/main/Screenshot%20(17).png?raw=true)
 
 ## Step 5: Setting an SSH Key
 * Now you could save up a lot of times by setting up an SSH Key because you won't have to enter your password when log in or copy files to a remote server with **ssh** and **scp**.
@@ -152,6 +152,6 @@ Here is some command could help you:
 `$ cp WhereAmI.java OtherMain.java; javac OtherMain.java; java WhereAmI`
 * You can use the up-arrow on your keyboard to recall the commands that was run.
 Here is an example output when you run those commands:
-![](file:///C:/Users/duong/OneDrive/Pictures/Screenshots/Screenshot%20(25).png)
+![](https://github.com/tnduong2807/cse15l-lab-reports/blob/main/Screenshot%20(25).png?raw=true)
 
 **Congratulation you have completed the tutorial of remote access!**
