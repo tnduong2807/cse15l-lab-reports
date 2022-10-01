@@ -8,5 +8,6 @@ Hello, world!
 * Weird coding
 * Talking to a rubber duck
 
-[Lab Report 1](lab-report-1-week-0.md)
+[Lab Report 0](lab-report-1-week-0.md)
 
+[Lab Report 1](cse15l-week1-lab-report1.md)
