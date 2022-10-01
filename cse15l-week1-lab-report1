@@ -96,9 +96,62 @@ After you run the program, you Terminal should look like this:
 * Run the command **ssh-keygen** on your terminal to create a pair of files that called the *public* key and *private* key
 * You will copy and put the public key to a specific location on the server, and private key in a other specific location on the client.
 * Then the **ssh** command can use the pair of files rather than your password.
+* Your Terminal should look like this, you can press **enter** to stay as the default path when the prompt **Enter file in which to save the key (/Users/duong/.ssh/id_rsa):** show up.
 ```
 (on the terminal of your computer **not connect to the server**)
-$ ssh-keyge
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/joe/.ssh/id_rsa): /Users/joe/.ssh/id_rsa
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /Users/joe/.ssh/id_rsa.
+Your public key has been saved in /Users/joe/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:jZaZH6fI8E2I1D35hnvGeBePQ4ELOf2Ge+G0XknoXp0 joe@Joes-Mac-mini.local
+The key's randomart image is:
++---[RSA 3072]----+
+|                 |
+|       . . + .   |
+|      . . B o .  |
+|     . . B * +.. |
+|      o S = *.B. |
+|       = = O.*.*+|
+|        + * *.BE+|
+|           +.+.o |
+|             ..  |
++----[SHA256]-----+
 ```
+If you are on Windows, and have some problem with the **ssh-keygen** command, please follow the extra **ssh-add** steps in this link or ask for help:
+[https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement#user-key-generation](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement#user-key-generation)
 
+* Now two new files created on your system, the file **id_rsa** as the private key and the file **id_rsa.pub** as the public key stored in the **.shh** directory on your computer.
+* You need to copy the public key or the file **id_rsa.pub** to the **.ssh** directory of your user account on the server, enter the command:
+```
+(On your computer terminal **not connected to the sever**)
+$ ssh cs15lfa22zz@ieng6.ucsd.edu
+<Enter Password to log in your server>
+```
+```
+(Now on your server terminal)
+$ mkdir .ssh
+$ <use command **exit** to logout>
+```
+```
+(Back to your computer terminal)
+$ scp /Users/duong/.ssh/id_rsa.pub cs15lfa22@ieng6.ucsd.edu:~/.ssh/authorized_keys
+(Please use your username and the path you saw or set up in the command above)
+```
+When you did this, you won't have to enter your password when your run **ssh** and **scp** from your client to the server.
 
+## Step 6: Optimizing Remote Running
+Now you could make remote running more efficient by using shortcut or other features, try to get total times for a run after editing and saving to under 10 total keystrokes or click buttons/mouse.
+Here is some command could help you:
+* You can use command **ssh** in quotes at the end to directly run it on the remote server:
+`$ ssh cs15lfa22@ieng6.ucsd.edu "ls"`
+* You can run multiple commands on the same line by separate them with semicolons in most terminals:
+`$ cp WhereAmI.java OtherMain.java; javac OtherMain.java; java WhereAmI`
+* You can use the up-arrow on your keyboard to recall the commands that was run.
+Here is an example output when you run those commands:
+![](file:///C:/Users/duong/OneDrive/Pictures/Screenshots/Screenshot%20(25).png)
+
+**Congratulation you have completed the tutorial of remote access!**
